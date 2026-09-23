@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alerts &amp; Comms — Disaster Response Volunteers</title>
+  <meta name="description" content="Admin alerts and communications — send broadcasts, manage alert feeds and monitor urgent notices." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">admin@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero" id="top">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Admin Console</span>
+        <h1>Alerts &amp; Communications</h1>
+        <p>Broadcast emergency alerts, manage channels, and keep every volunteer in the loop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="admin-dashboard.html">📊 Overview</a>
+        <a href="admin-missions.html">🚨 Mission Dispatch</a>
+        <a href="admin-applications.html">👥 Applications</a>
+        <a href="admin-alerts.html" class="is-active">📡 Alerts &amp; Comms</a>
+        <a href="admin-reports.html">📄 Reports</a>
+        <a href="admin-settings.html">⚙ Settings</a>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <div class="dash-stats">
+          <div class="stat-card">
+            <span class="stat-icon">🚨</span>
+            <span class="num" data-count="7">0</span>
+            <span class="lbl">Active Alerts</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">📣</span>
+            <span class="num" data-count="12480">0</span>
+            <span class="lbl">Subscribers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">📤</span>
+            <span class="num" data-count="3">0</span>
+            <span class="lbl">Sent Today</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">👁</span>
+            <span class="num" data-count="92">0<span class="hero-stat-unit">%</span></span>
+            <span class="lbl">Open Rate</span>
+          </div>
+        </div>
+
+        <section class="dash-panel" id="broadcast">
+          <div class="dash-panel-head">
+            <h2>Send a Broadcast</h2>
+          </div>
+          <form class="dash-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="aSeverity">Severity</label>
+                <select id="aSeverity" name="severity">
+                  <option>Critical</option>
+                  <option>High</option>
+                  <option selected>Standard</option>
+                  <option>Info</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="aRegion">Target region</label>
+                <select id="aRegion" name="region">
+                  <option value="all" selected>All districts</option>
+                  <option>Riverbend</option>
+                  <option>Cedar Ridge</option>
+                  <option>Westgate</option>
+                  <option>Northville</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="aTitle">Alert title</label>
+              <input type="text" id="aTitle" name="title" placeholder="e.g. Weather service upgraded Westgate storm" />
+            </div>
+            <div class="form-field">
+              <label for="aMessage">Message</label>
+              <textarea id="aMessage" name="message" rows="4" placeholder="Written update volunteers and communities will see…"></textarea>
+            </div>
+            <div class="form-field">
+              <label>Send via</label>
+              <label class="auth-check">
+                <input type="checkbox" checked />
+                <span>Email</span>
+              </label>
+              <label class="auth-check">
+                <input type="checkbox" checked />
+                <span>SMS</span>
+              </label>
+              <label class="auth-check">
+                <input type="checkbox" checked />
+                <span>Push notification</span>
+              </label>
+            </div>
+            <div class="dash-actions">
+              <button type="submit" class="btn btn-primary">Send Broadcast</button>
+              <button type="reset" class="btn btn-outline-dark">Cancel</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="dash-panel" id="feed">
+          <div class="dash-panel-head">
+            <h2>Recent Alerts</h2>
+            <a href="404.html" class="link">Archive →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="badge critical">⚠ Critical</span>
+                <span class="txt">Westgate storm upgraded to Emergency level.<time class="time">12 min ago</time></span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="badge info">ℹ Info</span>
+                <span class="txt">43 volunteers confirmed for the Riverbend flood response.<time class="time">1 h ago</time></span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="badge pending">🔄 Update</span>
+                <span class="txt">Northville shelter capacity upgraded to 600.<time class="time">3 h ago</time></span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="badge info">ℹ Info</span>
+                <span class="txt">Weekly chapter coordination call rescheduled to 18:00.<time class="time">5 h ago</time></span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

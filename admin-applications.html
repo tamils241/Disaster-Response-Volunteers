@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Applications — Disaster Response Volunteers</title>
+  <meta name="description" content="Review and approve volunteer applications for the Disaster Response network." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">admin@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero" id="top">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Admin Console</span>
+        <h1>Volunteer Applications</h1>
+        <p>Review new volunteers, check their training picks, and bring the next crew on board.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="admin-dashboard.html">📊 Overview</a>
+        <a href="admin-missions.html">🚨 Mission Dispatch</a>
+        <a href="admin-applications.html" class="is-active">👥 Applications</a>
+        <a href="admin-alerts.html">📡 Alerts &amp; Comms</a>
+        <a href="admin-reports.html">📄 Reports</a>
+        <a href="admin-settings.html">⚙ Settings</a>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <div class="dash-stats">
+          <div class="stat-card">
+            <span class="stat-icon">🆕</span>
+            <span class="num" data-count="14">0</span>
+            <span class="lbl">New Today</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">🕐</span>
+            <span class="num" data-count="37">0</span>
+            <span class="lbl">Pending Review</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">✅</span>
+            <span class="num" data-count="1048">0</span>
+            <span class="lbl">Approved</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">❌</span>
+            <span class="num" data-count="121">0</span>
+            <span class="lbl">Declined</span>
+          </div>
+        </div>
+
+        <section class="dash-panel" id="pending">
+          <div class="dash-panel-head">
+            <h2>Pending Review</h2>
+            <a href="404.html" class="link">Filter &amp; search →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="dash-avatar">J</span>
+                <span class="txt">Jade Rivera<time class="time">First Aid · Central District · today 09:14</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Approve</a>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Review</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">D</span>
+                <span class="txt">Dev Patel<time class="time">Search &amp; Rescue · Westgate · today 07:41</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Approve</a>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Review</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">K</span>
+                <span class="txt">Kim Su<time class="time">Logistics · Riverbend · yesterday 21:05</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Approve</a>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Review</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">R</span>
+                <span class="txt">Ranya Hassan<time class="time">Communications · Cedar Ridge · yesterday 18:22</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Approve</a>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Review</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">T</span>
+                <span class="txt">Tom Alvarez<time class="time">Shelter &amp; Relief · Northville · yesterday 16:10</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Approve</a>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Review</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">A</span>
+                <span class="txt">Aisha Bello<time class="time">First Aid · East District · yesterday 12:48</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Approve</a>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Review</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="dash-panel" id="recent">
+          <div class="dash-panel-head">
+            <h2>Recently Approved</h2>
+            <a href="404.html" class="link">View all →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="dash-avatar">N</span>
+                <span class="txt">Nora Lindqvist<time class="time">Search &amp; Rescue · Riverbend · approved today</time></span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge active">Active</span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">E</span>
+                <span class="txt">Eli Novak<time class="time">Shelter &amp; Relief · Westgate · approved today</time></span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge active">Active</span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">M</span>
+                <span class="txt">Ming Chen<time class="time">Logistics · Northville · approved yesterday</time></span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge active">Active</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

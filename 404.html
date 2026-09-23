@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Disaster Response Volunteers</title>
+  <meta name="description" content="This page couldn't be found. Head back to the Disaster Response Volunteers home page to continue." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ 404 CONTENT ============ -->
+  <section class="page-section" id="errbody">
+    <div class="container" style="text-align:center; max-width:640px;">
+      <div style="font-family: var(--font-head); font-size: clamp(4.5rem, 3rem + 8vw, 8rem); font-weight: 800; line-height: 1; color: var(--red);">404</div>
+      <h2 style="margin: 18px 0 10px;">We couldn't find that one</h2>
+      <p style="color: var(--muted); margin-bottom: 28px;">Try one of these instead:</p>
+      <div style="display: grid; gap: 12px; max-width: 320px; margin: 0 auto;">
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+        <a href="volunteers.html" class="btn btn-outline-dark">Become a Volunteer</a>
+        <a href="disasters.html" class="btn btn-outline-dark">View Live Response</a>
+        <a href="contact.html" class="btn btn-outline-dark">Contact Us</a>
+      </div>
+      <p style="color: var(--muted); font-size: 0.9rem; margin-top: 28px;">
+        Still stuck? Send a note to <a href="mailto:respond@drvolunteers.org" style="color: var(--red-dark); font-weight: 600;">respond@drvolunteers.org</a>.
+      </p>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mission Dispatch — Disaster Response Volunteers</title>
+  <meta name="description" content="Admin mission dispatch console — create, monitor and coordinate response missions." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">admin@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero" id="top">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Admin Console</span>
+        <h1>Mission Dispatch</h1>
+        <p>Create new responses, monitor live missions, and assign crews across all districts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="admin-dashboard.html">📊 Overview</a>
+        <a href="admin-missions.html" class="is-active">🚨 Mission Dispatch</a>
+        <a href="admin-applications.html">👥 Applications</a>
+        <a href="admin-alerts.html">📡 Alerts &amp; Comms</a>
+        <a href="admin-reports.html">📄 Reports</a>
+        <a href="admin-settings.html">⚙ Settings</a>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <div class="dash-stats">
+          <div class="stat-card">
+            <span class="stat-icon">🚨</span>
+            <span class="num" data-count="18">0</span>
+            <span class="lbl">Open Missions</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">⏸</span>
+            <span class="num" data-count="26">0</span>
+            <span class="lbl">On Standby</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">✅</span>
+            <span class="num" data-count="1204">0</span>
+            <span class="lbl">Missions Completed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">⚡</span>
+            <span class="num" data-count="18">0<span class="hero-stat-unit">min</span></span>
+            <span class="lbl">Avg Dispatch</span>
+          </div>
+        </div>
+
+        <section class="dash-panel" id="new">
+          <div class="dash-panel-head">
+            <h2>Dispatch a New Mission</h2>
+          </div>
+          <form class="dash-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="mName">Mission name</label>
+                <input type="text" id="mName" name="name" placeholder="e.g. Riverbend Flood Response" />
+              </div>
+              <div class="form-field">
+                <label for="mRegion">Region</label>
+                <select id="mRegion" name="region">
+                  <option value="">Select a district…</option>
+                  <option>Riverbend</option>
+                  <option>Cedar Ridge</option>
+                  <option>Westgate</option>
+                  <option>Northville</option>
+                  <option>East District</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="mType">Crisis type</label>
+                <select id="mType" name="type">
+                  <option>Flood Response</option>
+                  <option>Quake Support</option>
+                  <option>Fire Relief</option>
+                  <option>Storm Shelter</option>
+                  <option>Heat Relief</option>
+                  <option>Landslide</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="mPriority">Priority</label>
+                <select id="mPriority" name="priority">
+                  <option>Critical</option>
+                  <option>High</option>
+                  <option selected>Standard</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="mCrew">Crew size</label>
+                <input type="number" id="mCrew" name="crew" min="1" max="200" value="12" />
+              </div>
+              <div class="form-field">
+                <label for="mSkills">Required skills</label>
+                <select id="mSkills" name="skills">
+                  <option>First Aid &amp; Medical</option>
+                  <option>Search &amp; Rescue</option>
+                  <option>Logistics &amp; Transport</option>
+                  <option>Shelter &amp; Relief</option>
+                  <option>Communications</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="mNotes">Dispatch notes</label>
+              <textarea id="mNotes" name="notes" rows="3" placeholder="Situation brief, hazards, meeting point…"></textarea>
+            </div>
+            <div class="dash-actions">
+              <button type="submit" class="btn btn-primary">Dispatch Mission</button>
+              <button type="reset" class="btn btn-outline-dark">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="dash-panel" id="live">
+          <div class="dash-panel-head">
+            <h2>Live Missions</h2>
+            <a href="404.html" class="link">Full map →</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Mission</th>
+                  <th>Region</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Lead</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>N-2041<span class="sub">Started 2h ago</span></td>
+                  <td>Riverbend</td>
+                  <td>Flood Response</td>
+                  <td><span class="badge active">Active</span></td>
+                  <td>M. Okafor</td>
+                  <td><a href="404.html" class="link">Details</a></td>
+                </tr>
+                <tr>
+                  <td>N-2040<span class="sub">Started 5h ago</span></td>
+                  <td>Cedar Ridge</td>
+                  <td>Quake Support</td>
+                  <td><span class="badge active">Active</span></td>
+                  <td>S. Whitman</td>
+                  <td><a href="404.html" class="link">Details</a></td>
+                </tr>
+                <tr>
+                  <td>N-2038<span class="sub">Started 9h ago</span></td>
+                  <td>Westgate</td>
+                  <td>Fire Relief</td>
+                  <td><span class="badge critical">Critical</span></td>
+                  <td>L. Nguyen</td>
+                  <td><a href="404.html" class="link">Details</a></td>
+                </tr>
+                <tr>
+                  <td>N-2035<span class="sub">Pending team fill</span></td>
+                  <td>Northville</td>
+                  <td>Storm Shelter</td>
+                  <td><span class="badge pending">Pending</span></td>
+                  <td>—</td>
+                  <td><a href="404.html" class="link">Assign</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dash-panel" id="standby">
+          <div class="dash-panel-head">
+            <h2>Awaiting Response</h2>
+            <a href="404.html" class="link">View all →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="badge critical">⚠ Critical</span>
+                <span class="txt">East District levee breach — pumping crews needed overnight.<time class="time">Reported 22 min ago</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Dispatch</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="badge active">Active</span>
+                <span class="txt">Cedar Ridge aftershock — structural re-assessment requested.<time class="time">Reported 1 h ago</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Dispatch</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="badge pending">Standby</span>
+                <span class="txt">Northville shelter overflow — additional cots and supplies.<time class="time">Reported 3 h ago</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Dispatch</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

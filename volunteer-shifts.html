@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Shifts — Disaster Response Volunteers</title>
+  <meta name="description" content="Your volunteer shifts — upcoming, confirmed, pending and completed response shifts." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">volunteer@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero" id="top">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Volunteer Portal</span>
+        <h1>My Shifts</h1>
+        <p>Your upcoming response shifts and shift history across the network.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="volunteer-dashboard.html">📊 Overview</a>
+        <a href="volunteer-shifts.html" class="is-active">📅 My Shifts</a>
+        <a href="volunteer-training.html">🎓 Training</a>
+        <a href="volunteer-missions.html">🚨 Missions</a>
+        <a href="volunteer-alerts.html">🔔 Alerts</a>
+        <a href="volunteer-profile.html">👤 Profile</a>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <div class="dash-stats">
+          <div class="stat-card">
+            <span class="stat-icon">📅</span>
+            <span class="num" data-count="3">0</span>
+            <span class="lbl">Upcoming Shifts</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">⏱️</span>
+            <span class="num" data-count="24">0</span>
+            <span class="lbl">Hours This Month</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">✅</span>
+            <span class="num" data-count="4">0</span>
+            <span class="lbl">Confirmed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">🚫</span>
+            <span class="num" data-count="1">0</span>
+            <span class="lbl">Cancelled</span>
+          </div>
+        </div>
+
+        <section class="dash-panel" id="upcoming">
+          <div class="dash-panel-head">
+            <h2>Upcoming Shifts</h2>
+            <a href="404.html" class="link">Available shifts →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="dash-avatar">R</span>
+                <span class="txt">
+                  <strong>Riverbend Flood Response</strong>
+                  <time class="time">Sat, Oct 3 · 07:00 – 15:00 · First Aid Team</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge active">Confirmed</span>
+                <a href="404.html" class="btn btn-primary btn-sm">View Details</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">C</span>
+                <span class="txt">
+                  <strong>Cedar Ridge Quake Support</strong>
+                  <time class="time">Mon, Oct 5 · 08:00 – 16:00 · Logistics Rotation</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge pending">Pending</span>
+                <a href="404.html" class="btn btn-primary btn-sm">Confirm</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">N</span>
+                <span class="txt">
+                  <strong>Northville Storm Shelter</strong>
+                  <time class="time">Sun, Oct 5 · Standby pool · Shelter &amp; Relief</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge pending">Standby</span>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Details</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="dash-panel" id="history">
+          <div class="dash-panel-head">
+            <h2>Shift History</h2>
+            <a href="404.html" class="link">View all →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="dash-avatar">W</span>
+                <span class="txt">
+                  <strong>Westgate Fire Relief — evening surge</strong>
+                  <time class="time">Fri, Sep 25 · 18:00 – 23:00 · 5 hours</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge active">Attended</span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">E</span>
+                <span class="txt">
+                  <strong>East District Flood Line</strong>
+                  <time class="time">Sat, Sep 19 · 07:00 – 15:00 · 8 hours</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge active">Attended</span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">T</span>
+                <span class="txt">
+                  <strong>Training Hub — first aid refresher</strong>
+                  <time class="time">Sat, Sep 12 · 09:00 – 13:00 · 4 hours</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge info">Completed</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

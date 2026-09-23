@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Disaster Response Volunteers</title>
+  <meta name="description" content="Admin coordination console for Disaster Response Volunteers — missions, applications, alerts, and reports." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">admin@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero" id="top">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Admin Console</span>
+        <h1>Coordination Dashboard</h1>
+        <p>Monitor missions, approve volunteers, and keep alerts moving across all 132 districts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="admin-dashboard.html" class="is-active">📊 Overview</a>
+        <a href="admin-missions.html">🚨 Mission Dispatch</a>
+        <a href="admin-applications.html">👥 Applications</a>
+        <a href="admin-alerts.html">📡 Alerts &amp; Comms</a>
+        <a href="admin-reports.html">📄 Reports</a>
+        <a href="admin-settings.html">⚙ Settings</a>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <div class="dash-stats">
+          <div class="stat-card">
+            <span class="stat-icon">🧑‍🤝‍🧑</span>
+            <span class="num" data-count="12480">0</span>
+            <span class="lbl">Active Volunteers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">🚨</span>
+            <span class="num" data-count="18">0</span>
+            <span class="lbl">Open Missions</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">🗺️</span>
+            <span class="num" data-count="132">0</span>
+            <span class="lbl">Districts</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">⚠️</span>
+            <span class="num" data-count="7">0</span>
+            <span class="lbl">Active Alerts</span>
+          </div>
+        </div>
+
+        <section class="dash-panel" id="missions">
+          <div class="dash-panel-head">
+            <h2>Active Missions</h2>
+            <a href="404.html" class="link">Dispatch New Mission →</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Mission</th>
+                  <th>Region</th>
+                  <th>Type</th>
+                  <th>Status</th>
+                  <th>Lead</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>N-2041<span class="sub">Started 2h ago</span></td>
+                  <td>Riverbend</td>
+                  <td>Flood Response</td>
+                  <td><span class="badge active">Active</span></td>
+                  <td>M. Okafor</td>
+                </tr>
+                <tr>
+                  <td>N-2040<span class="sub">Started 5h ago</span></td>
+                  <td>Cedar Ridge</td>
+                  <td>Quake Support</td>
+                  <td><span class="badge active">Active</span></td>
+                  <td>S. Whitman</td>
+                </tr>
+                <tr>
+                  <td>N-2038<span class="sub">Started 9h ago</span></td>
+                  <td>Westgate</td>
+                  <td>Fire Relief</td>
+                  <td><span class="badge critical">Critical</span></td>
+                  <td>L. Nguyen</td>
+                </tr>
+                <tr>
+                  <td>N-2035<span class="sub">Pending team fill</span></td>
+                  <td>Northville</td>
+                  <td>Storm Shelter</td>
+                  <td><span class="badge pending">Pending</span></td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dash-panel" id="applications">
+          <div class="dash-panel-head">
+            <h2>Pending Volunteer Applications</h2>
+            <a href="404.html" class="link">View all →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="dash-avatar">J</span>
+                <span class="txt">Jade Rivera<time class="time">First Aid · Central District · today 09:14</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Approve</a>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Review</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">D</span>
+                <span class="txt">Dev Patel<time class="time">Search &amp; Rescue · Westgate · today 07:41</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Approve</a>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Review</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">K</span>
+                <span class="txt">Kim Su<time class="time">Logistics · Riverbend · yesterday 21:05</time></span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">Approve</a>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Review</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="dash-panel" id="alerts">
+          <div class="dash-panel-head">
+            <h2>Alert Feed</h2>
+            <a href="404.html" class="link">Send Broadcast →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="badge critical">⚠ Critical</span>
+                <span class="txt">Weather service upgraded Westgate storm to Emergency level.<time class="time">12 min ago</time></span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="badge info">ℹ Info</span>
+                <span class="txt">43 volunteers confirmed for the Riverbend flood response.<time class="time">1 h ago</time></span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="badge pending">🔄 Update</span>
+                <span class="txt">Shelter capacity at Northville upgraded to 600.<time class="time">3 h ago</time></span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reports — Disaster Response Volunteers</title>
+  <meta name="description" content="Admin reports — mission summaries, volunteer metrics, incident logs and downloadable reports." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">admin@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero" id="top">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Admin Console</span>
+        <h1>Reports</h1>
+        <p>Mission summaries, volunteer metrics and incident logs — downloadable for your coordination records.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="admin-dashboard.html">📊 Overview</a>
+        <a href="admin-missions.html">🚨 Mission Dispatch</a>
+        <a href="admin-applications.html">👥 Applications</a>
+        <a href="admin-alerts.html">📡 Alerts &amp; Comms</a>
+        <a href="admin-reports.html" class="is-active">📄 Reports</a>
+        <a href="admin-settings.html">⚙ Settings</a>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <div class="dash-stats">
+          <div class="stat-card">
+            <span class="stat-icon">🚨</span>
+            <span class="num" data-count="1204">0</span>
+            <span class="lbl">Missions Logged</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">🧑‍🤝‍🧑</span>
+            <span class="num" data-count="12480">0</span>
+            <span class="lbl">Volunteers</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">📋</span>
+            <span class="num" data-count="96">0</span>
+            <span class="lbl">Incidents</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">📄</span>
+            <span class="num" data-count="42">0</span>
+            <span class="lbl">Report Files</span>
+          </div>
+        </div>
+
+        <section class="dash-panel" id="library">
+          <div class="dash-panel-head">
+            <h2>Report Library</h2>
+            <a href="404.html" class="link">Generate new →</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Report</th>
+                  <th>Type</th>
+                  <th>Period</th>
+                  <th>Size</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monthly Mission Summary<span class="sub">Missions, crews, outcomes</span></td>
+                  <td>PDF</td>
+                  <td>Aug 2026</td>
+                  <td>1.2 MB</td>
+                  <td><span class="badge active">Ready</span></td>
+                  <td><a href="404.html" class="link">Download</a></td>
+                </tr>
+                <tr>
+                  <td>Volunteer Growth Report<span class="sub">Sign-ups &amp; retention</span></td>
+                  <td>XLSX</td>
+                  <td>Q3 2026</td>
+                  <td>840 KB</td>
+                  <td><span class="badge active">Ready</span></td>
+                  <td><a href="404.html" class="link">Download</a></td>
+                </tr>
+                <tr>
+                  <td>Incident Log — Westgate Fire<span class="sub">Chronology &amp; resources</span></td>
+                  <td>PDF</td>
+                  <td>Sep 2026</td>
+                  <td>2.4 MB</td>
+                  <td><span class="badge active">Ready</span></td>
+                  <td><a href="404.html" class="link">Download</a></td>
+                </tr>
+                <tr>
+                  <td>Quarterly Preparedness Audit<span class="sub">Training completion data</span></td>
+                  <td>CSV</td>
+                  <td>Jul – Sep 2026</td>
+                  <td>310 KB</td>
+                  <td><span class="badge pending">Processing</span></td>
+                  <td><a href="404.html" class="link">Details</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dash-panel" id="summary">
+          <div class="dash-panel-head">
+            <h2>Response Summary</h2>
+            <span class="badge info">This quarter</span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Mission completion</span>
+            <span class="pct">96%</span>
+            <span class="progress"><span style="width: 96%"></span></span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Volunteer retention</span>
+            <span class="pct">88%</span>
+            <span class="progress"><span style="width: 88%"></span></span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Training pass rate</span>
+            <span class="pct">92%</span>
+            <span class="progress"><span style="width: 92%"></span></span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Dispatch within 18 min</span>
+            <span class="pct">84%</span>
+            <span class="progress"><span style="width: 84%"></span></span>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

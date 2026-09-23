@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — Disaster Response Volunteers</title>
+  <meta name="description" content="Your volunteer profile, skills and communication preferences." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">volunteer@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero" id="top">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Volunteer Portal</span>
+        <h1>Profile</h1>
+        <p>Keep your contact details, skills and preferences up to date for better assignments.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="volunteer-dashboard.html">📊 Overview</a>
+        <a href="volunteer-shifts.html">📅 My Shifts</a>
+        <a href="volunteer-training.html">🎓 Training</a>
+        <a href="volunteer-missions.html">🚨 Missions</a>
+        <a href="volunteer-alerts.html">🔔 Alerts</a>
+        <a href="volunteer-profile.html" class="is-active">👤 Profile</a>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <section class="dash-panel" id="details">
+          <div class="dash-panel-head">
+            <h2>Personal Details</h2>
+          </div>
+          <form class="dash-form" action="404.html" method="get">
+            <div class="form-row">
+              <div class="form-field">
+                <label class="field-label" for="fullName">Full name</label>
+                <input class="input" type="text" id="fullName" name="fullName" value="Aiden Cole" />
+              </div>
+              <div class="form-field">
+                <label class="field-label" for="phone">Phone</label>
+                <input class="input" type="tel" id="phone" name="phone" value="+1 555 010 4477" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label class="field-label" for="emailAddr">Email</label>
+                <input class="input" type="email" id="emailAddr" name="emailAddr" value="volunteer@drvolunteers.org" />
+              </div>
+              <div class="form-field">
+                <label class="field-label" for="district">District</label>
+                <select class="input select" id="district" name="district">
+                  <option>North</option>
+                  <option selected>West</option>
+                  <option>South</option>
+                  <option>East</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label class="field-label" for="skills">Primary skills</label>
+                <select class="input select" id="skills" name="skills">
+                  <option>First Aid &amp; Medical</option>
+                  <option>Search &amp; Rescue</option>
+                  <option>Logistics &amp; Transport</option>
+                  <option selected>Shelter &amp; Relief</option>
+                  <option>Communications</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label class="field-label" for="vehicle">Vehicle access</label>
+                <select class="input select" id="vehicle" name="vehicle">
+                  <option selected>None</option>
+                  <option>Car — can transport</option>
+                  <option>Truck / van</option>
+                  <option>Off-road 4x4</option>
+                </select>
+              </div>
+            </div>
+            <div class="dash-actions">
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+              <button type="reset" class="btn btn-outline-dark">Cancel</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="dash-panel" id="skills">
+          <div class="dash-panel-head">
+            <h2>Skill Levels</h2>
+            <a href="volunteer-training.html" class="link">Training →</a>
+          </div>
+          <div class="meter-row">
+            <span class="label">First Aid &amp; Medical</span>
+            <span class="pct">90%</span>
+            <span class="progress"><span style="width: 90%"></span></span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Search &amp; Rescue</span>
+            <span class="pct">60%</span>
+            <span class="progress"><span style="width: 60%"></span></span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Logistics &amp; Transport</span>
+            <span class="pct">45%</span>
+            <span class="progress"><span style="width: 45%"></span></span>
+          </div>
+        </section>
+
+        <section class="dash-panel" id="preferences">
+          <div class="dash-panel-head">
+            <h2>Preferences</h2>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="txt"><strong>Available for night shifts</strong><time class="time">Show me on overnight standby</time></span>
+              </div>
+              <label class="switch"><input type="checkbox" id="prefNight" /><span class="slider"></span></label>
+            </li>
+            <li>
+              <div class="row">
+                <span class="txt"><strong>Open to long deployments</strong><time class="time">Multi-day missions outside your district</time></span>
+              </div>
+              <label class="switch"><input type="checkbox" id="prefLong" checked /><span class="slider"></span></label>
+            </li>
+          </ul>
+          <div class="dash-actions">
+            <button type="button" class="btn btn-primary">Save Preferences</button>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

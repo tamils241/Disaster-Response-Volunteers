@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Training — Disaster Response Volunteers</title>
+  <meta name="description" content="Your training progress, course modules and certificates across the volunteer network." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">volunteer@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero" id="top">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Volunteer Portal</span>
+        <h1>Training</h1>
+        <p>Track your modules, pick up where you left off, and certify for your next response role.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="volunteer-dashboard.html">📊 Overview</a>
+        <a href="volunteer-shifts.html">📅 My Shifts</a>
+        <a href="volunteer-training.html" class="is-active">🎓 Training</a>
+        <a href="volunteer-missions.html">🚨 Missions</a>
+        <a href="volunteer-alerts.html">🔔 Alerts</a>
+        <a href="volunteer-profile.html">👤 Profile</a>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <div class="dash-stats">
+          <div class="stat-card">
+            <span class="stat-icon">🎓</span>
+            <span class="num" data-count="68" data-suffix="%">0</span>
+            <span class="lbl">Training Complete</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">📜</span>
+            <span class="num" data-count="4">0</span>
+            <span class="lbl">Certificates</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">✅</span>
+            <span class="num" data-count="6">0</span>
+            <span class="lbl">Modules Done</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">⏳</span>
+            <span class="num" data-count="2">0</span>
+            <span class="lbl">In Progress</span>
+          </div>
+        </div>
+
+        <section class="dash-panel" id="progress">
+          <div class="dash-panel-head">
+            <h2>Training Progress</h2>
+            <a href="training.html" class="link">Catalog →</a>
+          </div>
+          <div class="meter-row">
+            <span class="label">First Aid &amp; Medical</span>
+            <span class="pct">90%</span>
+            <span class="progress"><span style="width: 90%"></span></span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Search &amp; Rescue</span>
+            <span class="pct">60%</span>
+            <span class="progress"><span style="width: 60%"></span></span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Logistics &amp; Transport</span>
+            <span class="pct">45%</span>
+            <span class="progress"><span style="width: 45%"></span></span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Shelter &amp; Relief</span>
+            <span class="pct">100%</span>
+            <span class="progress"><span style="width: 100%"></span></span>
+          </div>
+        </section>
+
+        <section class="dash-panel" id="modules">
+          <div class="dash-panel-head">
+            <h2>Course Modules</h2>
+            <a href="training.html" class="link">Browse all →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="dash-avatar">🩹</span>
+                <span class="txt">
+                  <strong>CPR &amp; AED Certification</strong>
+                  <time class="time">Module 1 · First Aid &amp; Medical</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge active">Complete</span>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Certificate</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">🏥</span>
+                <span class="txt">
+                  <strong>Wound Care &amp; Triage Basics</strong>
+                  <time class="time">Module 2 · First Aid &amp; Medical</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge active">Complete</span>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Certificate</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">🔦</span>
+                <span class="txt">
+                  <strong>Grid Searching &amp; Marking</strong>
+                  <time class="time">Module 3 · Search &amp; Rescue</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge pending">In Progress</span>
+                <a href="404.html" class="btn btn-primary btn-sm">Resume</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">📦</span>
+                <span class="txt">
+                  <strong>Supply Lines &amp; Warehousing</strong>
+                  <time class="time">Module 4 · Logistics &amp; Transport</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge pending">In Progress</span>
+                <a href="404.html" class="btn btn-primary btn-sm">Resume</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">⛺</span>
+                <span class="txt">
+                  <strong>Shelter Setup &amp; Registration</strong>
+                  <time class="time">Module 5 · Shelter &amp; Relief</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge active">Complete</span>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Certificate</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">🎙</span>
+                <span class="txt">
+                  <strong>Radio &amp; Digital Dispatch</strong>
+                  <time class="time">Module 6 · Communications · Coming soon</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge info">Locked</span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

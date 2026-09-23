@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — Disaster Response Volunteers</title>
+  <meta name="description" content="Sign up to become a Disaster Response volunteer. Free training, flexible shifts, and a community that rebuilds together." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ REGISTER ============ -->
+  <main class="auth-split">
+    <div class="auth-media">
+      <div class="hero-video">
+        <video autoplay muted loop playsinline preload="auto" poster="images/hero/hero-1.webp" aria-hidden="true"
+          onerror="this.closest('.hero-video').classList.add('no-video')">
+          <source src="videos/hero.mp4" type="video/mp4" />
+        </video>
+        <img src="images/hero/hero-1.webp" alt="" aria-hidden="true" />
+        <div class="hero-bg"></div>
+      </div>
+      <div class="auth-media-content">
+        <a href="index.html" class="brand" aria-label="Disaster Response Volunteers home">
+          <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+        </a>
+        <span class="eyebrow eyebrow-light">Join the Network</span>
+        <h2>Become a Trained Responder</h2>
+        <p>Free certification, flexible shifts, and a community that shows up when it matters.</p>
+        <ul class="auth-media-list">
+          <li>Free certified first-aid &amp; rescue training</li>
+          <li>Flexible weekends &amp; evening shifts</li>
+          <li>A local chapter near your district</li>
+        </ul>
+      </div>
+    </div>
+    <div class="auth-form-side">
+      <div class="auth-card">
+        <a href="index.html" class="brand auth-mobile-brand" aria-label="Disaster Response Volunteers home">
+          <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+        </a>
+        <span class="eyebrow">Join the Network</span>
+        <h1>Create Your Account</h1>
+        <p>Free training, flexible shifts, and a community that rebuilds together.</p>
+        <form class="auth-form" id="registerForm" novalidate>
+          <div class="form-field">
+            <label for="regName">Full name</label>
+            <input type="text" id="regName" name="name" autocomplete="name" placeholder="JaneDoe" required maxlength="16" pattern="^[A-Za-z]{1,16}$" title="Only letters (a–z), maximum 16 characters. Numbers, spaces and special characters are not allowed." />
+          </div>
+          <div class="form-field">
+            <label for="regEmail">Email address</label>
+            <input type="email" id="regEmail" name="email" autocomplete="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-field">
+            <label for="regDistrict">Nearest district / city</label>
+            <input type="text" id="regDistrict" name="district" autocomplete="address-level2" placeholder="CentralDistrict" required maxlength="16" pattern="^[A-Za-z]{1,16}$" title="Only letters (a–z), maximum 16 characters. Numbers, spaces and special characters are not allowed." />
+          </div>
+          <div class="form-field">
+            <label for="regSkill">Area of interest</label>
+            <select id="regSkill" name="skill">
+              <option value="first-aid">First Aid &amp; Medical</option>
+              <option value="search">Search &amp; Rescue</option>
+              <option value="logistics">Logistics &amp; Transport</option>
+              <option value="shelter">Shelter &amp; Relief</option>
+              <option value="comms">Communications</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="regRole">Account type</label>
+            <select id="regRole" name="role">
+              <option value="volunteer" selected>Volunteer</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="regPassword">Password</label>
+            <div class="input-wrap">
+              <input type="password" id="regPassword" name="password" autocomplete="new-password" placeholder="Create a strong password (min 8 characters)" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9])[\s\S]{8,}$" title="At least 8 characters with an uppercase letter, a lowercase letter, a number, and a symbol." />
+              <button type="button" class="pass-toggle" data-target="regPassword" aria-label="Show password">
+                <svg class="ico-eye show" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg class="ico-eye-off" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="regPasswordConfirm">Confirm password</label>
+            <div class="input-wrap">
+              <input type="password" id="regPasswordConfirm" name="password_confirm" autocomplete="new-password" placeholder="Re-enter your password" required />
+              <button type="button" class="pass-toggle" data-target="regPasswordConfirm" aria-label="Show password">
+                <svg class="ico-eye show" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg class="ico-eye-off" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/><path d="M14.12 14.12a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+              </button>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary auth-submit">Create Account</button>
+          <p class="auth-note" id="registerNote" role="status"></p>
+        </form>
+        <p class="auth-alt">Already a volunteer? <a href="login.html">Log in</a></p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

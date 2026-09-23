@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Missions — Disaster Response Volunteers</title>
+  <meta name="description" content="Your assigned missions, active deployments and mission history as a volunteer." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">volunteer@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero" id="top">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Volunteer Portal</span>
+        <h1>Missions</h1>
+        <p>Missions you are assigned to, active deployments and your response history.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="volunteer-dashboard.html">📊 Overview</a>
+        <a href="volunteer-shifts.html">📅 My Shifts</a>
+        <a href="volunteer-training.html">🎓 Training</a>
+        <a href="volunteer-missions.html" class="is-active">🚨 Missions</a>
+        <a href="volunteer-alerts.html">🔔 Alerts</a>
+        <a href="volunteer-profile.html">👤 Profile</a>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <div class="dash-stats">
+          <div class="stat-card">
+            <span class="stat-icon">🎖️</span>
+            <span class="num" data-count="18">0</span>
+            <span class="lbl">Missions Joined</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">🔴</span>
+            <span class="num" data-count="1">0</span>
+            <span class="lbl">Active</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">✅</span>
+            <span class="num" data-count="16">0</span>
+            <span class="lbl">Completed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">⏱️</span>
+            <span class="num" data-count="124">0</span>
+            <span class="lbl">Hours Served</span>
+          </div>
+        </div>
+
+        <section class="dash-panel" id="assigned">
+          <div class="dash-panel-head">
+            <h2>Assigned Missions</h2>
+            <a href="disasters.html" class="link">All missions →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="dash-avatar">🔥</span>
+                <span class="txt">
+                  <strong>Lakeview Wildfire Response</strong>
+                  <time class="time">Region West · Active since Oct 1 · 3 volunteers on your crew</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge active">Active</span>
+                <a href="404.html" class="btn btn-primary btn-sm">Mission Hub</a>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="dash-avatar">🌊</span>
+                <span class="txt">
+                  <strong>Riverbend Flood Response</strong>
+                  <time class="time">Region South · Mobilizing · Crew leader assigned</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <span class="badge pending">Assigning</span>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Details</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="dash-panel" id="history">
+          <div class="dash-panel-head">
+            <h2>Mission History</h2>
+            <a href="404.html" class="link">Export report →</a>
+          </div>
+          <div class="dash-table-wrap">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Mission</th>
+                  <th>Type</th>
+                  <th>Region</th>
+                  <th>Date</th>
+                  <th>Hours</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Westgate Fire Relief</td>
+                  <td>Wildfire</td>
+                  <td>West</td>
+                  <td>Sep 2026</td>
+                  <td>12</td>
+                  <td><span class="badge active">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>East District Flood Line</td>
+                  <td>Flood</td>
+                  <td>East</td>
+                  <td>Aug 2026</td>
+                  <td>21</td>
+                  <td><span class="badge active">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Northville Quake Aid</td>
+                  <td>Earthquake</td>
+                  <td>North</td>
+                  <td>Jun 2026</td>
+                  <td>18</td>
+                  <td><span class="badge active">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>Westhill Storm Shelter</td>
+                  <td>Storm</td>
+                  <td>West</td>
+                  <td>May 2026</td>
+                  <td>9</td>
+                  <td><span class="badge info">Attended</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

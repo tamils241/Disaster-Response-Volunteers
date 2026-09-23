@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — Disaster Response Volunteers</title>
+  <meta name="description" content="Admin settings — organisation profile, contact details, notification preferences and safety toggles." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">admin@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero" id="top">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Admin Console</span>
+        <h1>Settings</h1>
+        <p>Organisation profile, hotline details, notification preferences and network safety toggles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="admin-dashboard.html">📊 Overview</a>
+        <a href="admin-missions.html">🚨 Mission Dispatch</a>
+        <a href="admin-applications.html">👥 Applications</a>
+        <a href="admin-alerts.html">📡 Alerts &amp; Comms</a>
+        <a href="admin-reports.html">📄 Reports</a>
+        <a href="admin-settings.html" class="is-active">⚙ Settings</a>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <section class="dash-panel" id="profile">
+          <div class="dash-panel-head">
+            <h2>Organisation Profile</h2>
+          </div>
+          <form class="dash-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="sName">Organisation name</label>
+                <input type="text" id="sName" name="name" value="Disaster Response Volunteers" />
+              </div>
+              <div class="form-field">
+                <label for="sHQ">Headquarters</label>
+                <input type="text" id="sHQ" name="hq" value="National Coordination Hub, Central District" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="sHotline">Emergency hotline</label>
+                <input type="text" id="sHotline" name="hotline" value="+1 (555) 010-0123" />
+              </div>
+              <div class="form-field">
+                <label for="sEmail">Public email</label>
+                <input type="email" id="sEmail" name="email" value="respond@drvolunteers.org" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="sRegion">Primary region</label>
+                <select id="sRegion" name="region">
+                  <option selected>Central District</option>
+                  <option>Riverbend</option>
+                  <option>Cedar Ridge</option>
+                  <option>Westgate</option>
+                  <option>Northville</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="sChapters">Active chapters</label>
+                <input type="number" id="sChapters" name="chapters" min="1" max="200" value="14" />
+              </div>
+            </div>
+            <div class="dash-actions">
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+              <button type="reset" class="btn btn-outline-dark">Reset</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="dash-panel" id="notifications">
+          <div class="dash-panel-head">
+            <h2>Notifications</h2>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="txt"><strong>Critical mission alerts</strong><time class="time">Email and SMS when a critical mission opens near you.</time></span>
+              </div>
+              <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+            </li>
+            <li>
+              <div class="row">
+                <span class="txt"><strong>New applications</strong><time class="time">Notify admin when a volunteer application arrives.</time></span>
+              </div>
+              <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+            </li>
+            <li>
+              <div class="row">
+                <span class="txt"><strong>Weekly digest</strong><time class="time">Monday summary of missions, training and chapters.</time></span>
+              </div>
+              <label class="switch"><input type="checkbox" /><span class="slider"></span></label>
+            </li>
+            <li>
+              <div class="row">
+                <span class="txt"><strong>System maintenance</strong><time class="time">Rare downtime and platform updates.</time></span>
+              </div>
+              <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+            </li>
+          </ul>
+        </section>
+
+        <section class="dash-panel" id="safety">
+          <div class="dash-panel-head">
+            <h2>Network Safety</h2>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="txt"><strong>Require training before deployment</strong><time class="time">Volunteers must pass their nominated track before field work.</time></span>
+              </div>
+              <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+            </li>
+            <li>
+              <div class="row">
+                <span class="txt"><strong>Buddy system enforcement</strong><time class="time">Crews deploy in pairs; solo field work is blocked.</time></span>
+              </div>
+              <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+            </li>
+            <li>
+              <div class="row">
+                <span class="txt"><strong>Public incident markers</strong><time class="time">Show open incidents and closures on the public map.</time></span>
+              </div>
+              <label class="switch"><input type="checkbox" checked /><span class="slider"></span></label>
+            </li>
+            <li>
+              <div class="row">
+                <span class="txt"><strong>Two-step verification for admins</strong><time class="time">Require an extra code on all admin logins.</time></span>
+              </div>
+              <label class="switch"><input type="checkbox" /><span class="slider"></span></label>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

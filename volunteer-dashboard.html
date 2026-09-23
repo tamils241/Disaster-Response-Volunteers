@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer Dashboard — Disaster Response Volunteers</title>
+  <meta name="description" content="Your volunteer portal — shifts, training progress, assigned missions, and network updates." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ DASHBOARD BAR ============ -->
+  <header class="dash-bar">
+    <div class="container dash-bar-inner">
+      <button class="nav-toggle dash-toggle" id="dashNavToggle" aria-expanded="false" aria-controls="dashSide" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="index.html" class="brand brand-bar" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <div class="dash-user-badge">
+        <span class="dash-user-email" id="dashUserEmail">volunteer@drvolunteers.org</span>
+        <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DASHBOARD HERO ============ -->
+  <section class="dash-hero">
+    <div class="container">
+      <div class="dash-hero-head">
+        <span class="eyebrow eyebrow-light">Volunteer Portal</span>
+        <h1>Welcome back, Alex!</h1>
+        <p>Your next shift is in 2 days. Three training modules are ready for you this week.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD MAIN ============ -->
+  <main class="page-section">
+    <div class="container dash-shell">
+
+      <aside class="dash-side" id="dashSide">
+        <a href="volunteer-dashboard.html" class="is-active">📊 Overview</a>
+        <a href="volunteer-shifts.html">📅 My Shifts</a>
+        <a href="volunteer-training.html">🎓 Training</a>
+        <a href="volunteer-missions.html">🚨 Missions</a>
+        <a href="volunteer-alerts.html">🔔 Alerts</a>
+<a href="volunteer-profile.html">👤 Profile</a>
+          <a href="login.html" class="btn btn-outline btn-sm">Log Out</a>
+      </aside>
+
+      <div class="dash-main">
+
+        <div class="dash-stats">
+          <div class="stat-card">
+            <span class="stat-icon">📅</span>
+            <span class="num" data-count="3">0</span>
+            <span class="lbl">Upcoming Shifts</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">⏱️</span>
+            <span class="num" data-count="124">0</span>
+            <span class="lbl">Hours Served</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">🚨</span>
+            <span class="num" data-count="18">0</span>
+            <span class="lbl">Missions Joined</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-icon">🎓</span>
+            <span class="num" data-count="68" data-suffix="%">0</span>
+            <span class="lbl">Training Complete</span>
+          </div>
+        </div>
+
+        <section class="dash-panel" id="nextshift">
+          <div class="dash-panel-head">
+            <h2>Next Shift</h2>
+            <span class="badge active">Confirmed</span>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="txt">
+                  <strong>Riverbend Flood Response</strong>
+                  <time class="time">Sat, Oct 3 · 07:00 – 15:00 · First Aid Team</time>
+                </span>
+              </div>
+              <div class="dash-actions">
+                <a href="404.html" class="btn btn-primary btn-sm">View Details</a>
+                <a href="404.html" class="btn btn-outline-dark btn-sm">Message Lead</a>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="dash-panel" id="training">
+          <div class="dash-panel-head">
+            <h2>Training Progress</h2>
+            <a href="training.html" class="link">Go to training →</a>
+          </div>
+          <div class="meter-row">
+            <span class="label">First Aid &amp; Medical</span>
+            <span class="pct">90%</span>
+            <span class="progress"><span style="width: 90%"></span></span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Search &amp; Rescue</span>
+            <span class="pct">60%</span>
+            <span class="progress"><span style="width: 60%"></span></span>
+          </div>
+          <div class="meter-row">
+            <span class="label">Logistics &amp; Transport</span>
+            <span class="pct">45%</span>
+            <span class="progress"><span style="width: 45%"></span></span>
+          </div>
+        </section>
+
+        <section class="dash-panel" id="missions">
+          <div class="dash-panel-head">
+            <h2>Assigned Missions</h2>
+            <a href="404.html" class="link">View all →</a>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="badge critical">Critical</span>
+                <span class="txt">Westgate Fire Relief — evening surge<time class="time">Today, 19:00</time></span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="badge active">Active</span>
+                <span class="txt">Cedar Ridge Quake Support — logistics rotation<time class="time">Tomorrow, 08:00</time></span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="badge pending">Pending</span>
+                <span class="txt">Northville Storm Shelter — standby pool<time class="time">Sun, Oct 5</time></span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="dash-panel" id="news">
+          <div class="dash-panel-head">
+            <h2>Network Announcements</h2>
+          </div>
+          <ul class="dash-list">
+            <li>
+              <div class="row">
+                <span class="txt">📢 New advanced first-aid certification opens next Monday.<time class="time">2 h ago</time></span>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <span class="txt">🎉 The network passed 12,000 trained volunteers — thank you!<time class="time">Yesterday</time></span>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Disaster Response Volunteers</title>
+  <meta name="description" content="Learn about the Disaster Response Volunteers network — who we are, how we started, and how we help communities prepare, respond, and rebuild." />
+  <link rel="icon" type="image/webp" href="images/logo/logo-theme.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PAGE LOADER ============ -->
+  <div class="page-loader" id="pageLoader" aria-hidden="true">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <img src="images/logo/logo-theme.webp" alt="" class="loader-logo" />
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Disaster Response Volunteers home">
+        <img src="images/logo/logo-theme.webp" alt="Disaster Response Volunteers logo" class="brand-logo" />
+      </a>
+      <nav class="site-nav" id="mainNav" aria-label="Primary">
+        <ul class="nav-main-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link is-active">About</a></li>
+          <li><a href="training.html" class="nav-link">Training</a></li>
+          <li><a href="volunteers.html" class="nav-link">Volunteers</a></li>
+          <li><a href="disasters.html" class="nav-link">Disasters</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <ul class="nav-auth-links">
+          <li><a href="login.html" class="nav-link">Login</a></li>
+          <li><a href="register.html" class="nav-link nav-register">Register</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="hero-video">
+      <video autoplay muted loop playsinline preload="auto" poster="images/emergency/operations.webp" aria-hidden="true"
+        onerror="this.closest('.hero-video').classList.add('no-video')">
+        <source src="videos/Emergency.mp4" type="video/mp4" />
+      </video>
+      <img src="images/emergency/operations.webp" alt="" aria-hidden="true" />
+      <div class="hero-bg"></div>
+    </div>
+    <div class="container">
+      <span class="eyebrow eyebrow-light">About Us</span>
+      <h1>We Prepare. We Respond. We Rebuild.</h1>
+      <p>Disaster Response Volunteers is a network of neighbours who show up in the worst moments and stay long after the cameras leave.</p>
+      <div class="hero-actions">
+        <a href="volunteers.html" class="btn btn-primary">Become a Volunteer</a>
+        <a href="#story" class="btn btn-outline">Read Our Story</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num">12,000+</span><span class="lbl">Volunteers</span></div>
+        <div class="hero-stat"><span class="num">4,800+</span><span class="lbl">Missions</span></div>
+        <div class="hero-stat"><span class="num">132</span><span class="lbl">Communities</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORY ============ -->
+  <section class="page-section" id="story">
+    <div class="container">
+      <div class="how-grid">
+        <div class="text-block">
+          <span class="eyebrow">Our Story</span>
+          <h2>Born From a Flooded Street</h2>
+          <p>We started in the Central District after a flash flood cut off 40 families with just hours of warning. There was no dispatch, no coordination — only neighbours wading into a crisis with buckets and bare hands.</p>
+          <p>That night we built a phone tree on a borrowed laptop. A year later it became an app, a training program, and a network of over 12,000 trained volunteers across five regions.</p>
+          <ul>
+            <li>Founded by first responders and local residents</li>
+            <li>Community-owned, volunteer-run operations</li>
+            <li>Every response led by a certified field coordinator</li>
+            <li>Open to everyone — no experience required</li>
+          </ul>
+        </div>
+        <div class="how-visual">
+          <video autoplay muted loop playsinline preload="auto" poster="images/emergency/operations.webp" aria-label="Volunteers coordinating emergency operations"
+            onerror="this.classList.add('no-video')">
+            <source src="videos/Field-operations.mp4" type="video/mp4" />
+          </video>
+          <img src="images/emergency/operations.webp" alt="Volunteers coordinating emergency operations" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VALUES ============ -->
+  <section class="page-section alt" id="values">
+    <div class="container">
+      <div class="page-section-head">
+        <span class="eyebrow">Our Values</span>
+        <h2>What Drives Every Crew</h2>
+        <p>Six principles shape how every crew trains, deploys, and rebuilds.</p>
+      </div>
+      <div class="info-grid three">
+        <article class="info-card">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.4 5 5.6.8-4 3.9.9 5.5L12 16l-4.9 2.2.9-5.5-4-3.9 5.6-.8L12 3z"/></svg>
+            Community First
+          </h3>
+          <p>Local knowledge beats distant planning. We train people who live where disasters happen.</p>
+        </article>
+        <article class="info-card">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11.5 12 14l7-7M4 20h16"/></svg>
+            Always Ready
+          </h3>
+          <p>Training, gear checks, and scenario drills run year-round so the first hour is never wasted.</p>
+        </article>
+        <article class="info-card">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12V7l-9-5-9 5v5c0 5.5 3.8 9.7 9 10 5.2-.3 9-4.5 9-10z"/></svg>
+            Safety Above All
+          </h3>
+          <p>No heroics, no shortcuts. Every deployment follows certified safety protocols.</p>
+        </article>
+        <article class="info-card">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9C1 8.5 3 5.5 6.5 5.5c2 0 3.5 1 4.5 2.5 1-1.5 2.5-2.5 4.5-2.5C19 5.5 21 8.5 20.5 12c-2 4.4-9.5 9-9.5 9z"/></svg>
+            Rebuild Together
+          </h3>
+          <p>Recovery outlasts cleanup. We stay connected to families months after an emergency ends.</p>
+        </article>
+        <article class="info-card">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 19c0-3.2 2.9-5.2 6.5-5.2s6.5 2 6.5 5.2"/><path d="M16 3.3a3.2 3.2 0 0 1 0 6.1"/><path d="M17.6 14c2.3.8 3.9 2.5 3.9 4.6"/></svg>
+            Everyone Belongs
+          </h3>
+          <p>Emergency readiness fails when it leaves people out. All of our programs are accessible by design.</p>
+        </article>
+        <article class="info-card">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 5 5.6.8-4 3.9.9 5.5L12 14.5l-4.9 2.2.9-5.5-4-3.9 5.6-.8L12 2z"/></svg>
+            Grown Locally
+          </h3>
+          <p>Chapters are led by residents, supported by the network — not the other way around.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ IMPACT STRIP ============ -->
+  <section class="impact section" id="impact">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Our Reach</span>
+        <h2>Real Numbers, Real Lives</h2>
+        <p>Every stat is a neighbour we helped stand back up.</p>
+      </div>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 19c0-3.2 2.9-5.2 6.5-5.2s6.5 2 6.5 5.2"/><path d="M16 3.3a3.2 3.2 0 0 1 0 6.1"/><path d="M17.6 14c2.3.8 3.9 2.5 3.9 4.6"/></svg>
+          </div>
+          <span class="impact-num"><span class="num" data-count="12000" data-suffix="+">0</span></span>
+          <span class="impact-lbl">Active Volunteers</span>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h14l-1.5 14h-11L5 3Z"/><path d="M8 17c0 2 .9 4 3 4s3-2 3-4"/></svg>
+          </div>
+          <span class="impact-num"><span class="num" data-count="4800" data-suffix="+">0</span></span>
+          <span class="impact-lbl">Missions Completed</span>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="7"/><path d="M12 9.5V13l2.4 2"/></svg>
+          </div>
+          <span class="impact-num"><span class="num" data-count="18" data-suffix=" min">0</span></span>
+          <span class="impact-lbl">Average Response</span>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.2 2.4 3.4 5.1 3.4 8.5 0 3.4-1.2 6.1-3.4 8.5-2.2-2.4-3.4-5.1-3.4-8.5 0-3.4 1.2-6.1 3.4-8.5Z"/></svg>
+          </div>
+          <span class="impact-num"><span class="num" data-count="132" data-suffix="+">0</span></span>
+          <span class="impact-lbl">Communities Supported</span>
+        </div>
+      </div>
+      <div class="cta-actions">
+        <a href="volunteers.html" class="btn btn-primary">Join the Network</a>
+        <a href="training.html" class="btn btn-outline-dark">Explore Training</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY ============ -->
+  <section class="page-section" id="journey">
+    <div class="container">
+      <div class="page-section-head">
+        <span class="eyebrow">Our Journey</span>
+        <h2>From One Flooded Street to Five Regions</h2>
+        <p>Milestones that shaped the network.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <span class="step-num">2016</span>
+          <div>
+            <h3>The First Night</h3>
+            <p>A flash flood strands 40 families. Neighbours organise by phone tree and a borrowed laptop.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2018</span>
+          <div>
+            <h3>Five Chapters</h3>
+            <p>The Central District hub opens and four regional chapters follow, each led by local coordinators.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2021</span>
+          <div>
+            <h3>The Response App</h3>
+            <p>Dispatch goes digital: live maps, skill matching, and silent-alert tools for field crews.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">2026</span>
+          <div>
+            <h3>12,000+ Strong</h3>
+            <p>More than 12,000 trained volunteers have completed 4,800+ missions across 132 communities.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ HOW WE WORK ============ -->
+  <section class="page-section alt" id="approach">
+    <div class="container">
+      <div class="page-section-head">
+        <span class="eyebrow">How We Work</span>
+        <h2>One Loop, Repeated Everywhere</h2>
+        <p>Prepare. Respond. Rebuild. The cycle that keeps communities resilient.</p>
+      </div>
+      <div class="info-grid three">
+        <article class="info-card">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2 5 5 1.5-3.5 4 .7 5.2L12 16l-4.2 2.7.7-5.2L5 9.5 10 8l2-5z"/></svg>
+            Prepare
+          </h3>
+          <p>Year-round training, stocked kits, and neighbourhood plans make the first hour of any emergency faster and safer.</p>
+        </article>
+        <article class="info-card">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+            Respond
+          </h3>
+          <p>Certified coordinators dispatch trained crews within minutes — search, rescue, shelter, and logistics on the ground.</p>
+        </article>
+        <article class="info-card">
+          <h3>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11.5 12 14l7-7M4 20h16"/></svg>
+            Rebuild
+          </h3>
+          <p>Recovery outlasts cleanup. We stay for the rebuild, the paperwork, and the long road back to normal.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEADERSHIP ============ -->
+  <section class="page-section" id="leadership">
+    <div class="container">
+      <div class="page-section-head">
+        <span class="eyebrow">Leadership</span>
+        <h2>The People Behind the Plan</h2>
+        <p>A small national team, backed by thousands of local leaders.</p>
+      </div>
+      <div class="info-grid three">
+        <article class="info-card">
+          <h3 style="gap: 10px;">Amara Chen</h3>
+          <span style="display: block; color: var(--red-dark); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">National Director</span>
+          <p>Former emergency-room nurse who ran her first neighbourhood evacuation at 19.</p>
+        </article>
+        <article class="info-card">
+          <h3>Moussa Diop</h3>
+          <span style="display: block; color: var(--red-dark); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Head of Training</span>
+          <p>Built our certification tracks from a decade on rescue crews across three regions.</p>
+        </article>
+        <article class="info-card">
+          <h3>Priya Sharma</h3>
+          <span style="display: block; color: var(--red-dark); font-weight: 600; font-size: 0.85rem; margin-bottom: 10px;">Recovery Lead</span>
+          <p>Social worker who focuses on the months after the emergency — housing, aid, and hope.</p>
+        </article>
+      </div>
+
+      <div class="page-section-head" style="margin-top: 54px;">
+        <span class="eyebrow">Trusted Partners</span>
+        <h2>Backed by People Who Care</h2>
+        <p>Donations and support from partners keep every programme free for volunteers.</p>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+        <span class="eyebrow">City Relief Foundation</span>
+        <span class="eyebrow">The Grace Fund</span>
+        <span class="eyebrow">Redline Logistics</span>
+        <span class="eyebrow">FirstLight Media</span>
+        <span class="eyebrow">National Fire &amp; Rescue Guild</span>
+        <span class="eyebrow">Coastal Utilities Co-op</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+
+<footer class="site-footer">
+
+  <div class="container footer-grid">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+
+      <a href="index.html" class="brand brand-footer">
+        <img
+          src="images/logo/logo-theme.webp"
+          alt="Disaster Response Volunteers logo"
+          class="brand-logo"
+        />
+      </a>
+
+      <p>
+        A community-powered emergency relief network.
+        We prepare, we respond, we rebuild.
+      </p>
+
+      <!-- SOCIAL MEDIA -->
+      <div class="footer-social">
+
+        <a href="404.html" aria-label="Facebook" title="Facebook">
+          <span>f</span>
+        </a>
+
+        <a href="404.html" aria-label="Instagram" title="Instagram">
+          <span>◎</span>
+        </a>
+
+        <a href="404.html" aria-label="Twitter" title="Twitter">
+          <span>𝕏</span>
+        </a>
+
+        <a href="404.html" aria-label="YouTube" title="YouTube">
+          <span>▶</span>
+        </a>
+
+        <a href="404.html" aria-label="LinkedIn" title="LinkedIn">
+          <span>in</span>
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- NETWORK -->
+    <div class="footer-col">
+
+      <h4>Network</h4>
+
+      <a href="about.html">About Us</a>
+      <a href="disasters.html">Crisis Types</a>
+      <a href="training.html">Training</a>
+      <a href="volunteers.html">Volunteers</a>
+      <a href="disasters.html">Live Updates</a>
+
+    </div>
+
+
+    <!-- GET INVOLVED -->
+    <div class="footer-col">
+
+      <h4>Get Involved</h4>
+
+      <a href="volunteers.html">Become a Volunteer</a>
+      <a href="training.html">Training</a>
+      <a href="register.html">Register</a>
+      <a href="index.html#donate">Donate</a>
+      <a href="index.html#faq">FAQ</a>
+
+    </div>
+
+
+    <!-- RESOURCES -->
+    <div class="footer-col">
+
+      <h4>Resources</h4>
+
+      <a href="index.html#preparedness">Preparedness Guide</a>
+      <a href="disasters.html">Emergency Updates</a>
+      <a href="contact.html">Contact Coordination</a>
+      <a href="contact.html">Hotline &amp; Helplines</a>
+      <a href="index.html#preparedness">Safety Information</a>
+
+    </div>
+
+
+    <!-- HOTLINE -->
+    <div class="footer-col footer-hotline">
+
+      <h4>Emergency Hotline</h4>
+
+      <a href="404.html" class="hotline-number">
+        +1 (555) 010-0123
+      </a>
+
+      <a href="mailto:respond@drvolunteers.org">
+        respond@drvolunteers.org
+      </a>
+
+      <p class="footer-location">
+        📍 National Coordination Hub,<br />
+        Central District
+      </p>
+
+      </div>
+
+  </div>
+
+
+  <!-- FOOTER BOTTOM -->
+
+  <div class="container footer-bottom">
+
+    <div class="footer-bottom-left">
+      <p>
+        © <span id="year">2026</span>
+        Disaster Response Volunteers.
+        All rights reserved.
+      </p>
+    </div>
+
+    <div class="footer-bottom-links">
+
+      <a href="404.html">Privacy Policy</a>
+      <a href="404.html">Terms of Service</a>
+      <a href="404.html">Accessibility</a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
